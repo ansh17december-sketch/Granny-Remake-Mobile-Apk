@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Granny Remake Mobile Modded APK</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:700|Audiowide|Monoton&display=swap">
+  <style>
+    body {
+      background: #070214;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .neon-title {
+      font-size: 2.6em;
+      font-family: 'Monoton', 'Orbitron', 'Audiowide', Arial, sans-serif;
+      text-align: center;
+      margin-top: 66px;
+      text-shadow:
+        0 0 6px #fff,
+        0 0 25px #fff292,
+        0 0 45px #78ffd6,
+        0 0 82px #c3bf6d;
+      background: linear-gradient(90deg, #ff00cc, #00fff7 40%, #FFD700 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2.4px;
+      padding-bottom: 8px;
+      filter: brightness(1.18);
+      animation: pulse 2s infinite alternate;
+    }
+    @keyframes pulse {
+      0% {filter: brightness(1);}
+      100% {filter: brightness(1.35);}
+    }
+    .container {
+      margin-top: 55px;
+      width: 340px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-btn {
+      width: 100%;
+      font-family: 'Audiowide', 'Segoe UI', 'Orbitron', Arial, sans-serif;
+      background: linear-gradient(115deg, #5cfaff 15%, #e24aaa 70%, #fff020 100%);
+      color: #23223d;
+      font-size: 1.33em;
+      border-radius: 21px;
+      border: none;
+      padding: 36px 18px 30px 28px;
+      font-weight: 700;
+      box-shadow: 0 8px 34px #09ffe664, 0 0 24px #ff3a8da9;
+      cursor: pointer;
+      text-align: left;
+      letter-spacing: 1.14px;
+      position: relative;
+      transition: box-shadow 0.18s, transform 0.15s, color 0.16s;
+      backdrop-filter: blur(2px);
+      outline: none;
+      margin-top: 10px;
+    }
+    .card-btn:hover, .card-btn:focus {
+      box-shadow: 0 13px 56px #64e2d5c4, 0 0 32px #ff3a8d;
+      color: #ff48b1;
+      transform: scale(1.045);
+    }
+    .btn-label {
+      background: rgba(12,19,100,.27);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.98em;
+      font-weight: 600;
+      padding: 6px 20px 4px 16px;
+      margin-bottom: 13px;
+      display: inline-block;
+      letter-spacing: 0.47px;
+      font-style: italic;
+      box-shadow: 0 0 18px #00d1ffb4;
+    }
+    .card-btn::after {
+      content: "★";
+      float: right;
+      font-size: 1.4em;
+      margin-top: -36px;
+      opacity: .59;
+      color: #fff0a1;
+      filter: blur(0.2px);
+      text-shadow: 0 0 10px #fff0a1,0 0 8px #00fff7;
+    }
+    .star-animation {
+      pointer-events: none;
+      position: fixed;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      z-index: 99;
+      overflow: visible;
+      background: transparent;
+      opacity: 1;
+      transition: opacity 0.6s cubic-bezier(.4,2,.4,1.10);
+      display: none;
+    }
+    @media (max-width: 470px) {
+      .container {width: 97vw;}
+      .neon-title {font-size: 1.25em;}
+      .card-btn {font-size: .99em;}
+    }
+  </style>
+</head>
+<body>
+  <div class="neon-title">✨ Granny Remake Mobile Modded APK ✨</div>
+  <div class="container">
+    <button class="card-btn" id="mainBtn">
+      <span class="btn-label">Download Now</span><br>
+      Granny Remake Mobile Modded APK
+    </button>
+  </div>
+  <canvas class="star-animation" id="starAnim"></canvas>
+  <script>
+    // Star animation logic & redirect
+    const btn = document.getElementById('mainBtn');
+    const canvas = document.getElementById('starAnim');
+    let playing = false;
+    btn.addEventListener('click', () => {
+      if (playing) return;
+      canvas.style.display = 'block';
+      let W = window.innerWidth, H = window.innerHeight;
+      canvas.width = W; canvas.height = H;
+      const ctx = canvas.getContext('2d');
+      const stars = [];
+      const count = 90;
+      for(let i=0; i<count; i++) {
+        let angle = 2 * Math.PI * i / count;
+        let speed = 5 + Math.random() * 11;
+        stars.push({
+          x: W/2, y: H/2,
+          vx: Math.cos(angle) * speed + (Math.random()-0.5)*3,
+          vy: Math.sin(angle) * speed + (Math.random()-0.5)*3,
+          r: 2 + Math.random()*3,
+          color: `hsl(${200+Math.random()*140},100%,70%)`
+        });
+      }
+      let frame = 0; playing = true;
+      function draw() {
+        ctx.clearRect(0,0,W,H);
+        for(let star of stars) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.r, 0, 2*Math.PI);
+          ctx.shadowBlur = 12;
+          ctx.shadowColor = star.color;
+          ctx.fillStyle = star.color;
+          ctx.globalAlpha = 1-Math.min(frame/90,0.91);
+          ctx.fill();
+          ctx.restore();
+          star.x += star.vx * (1 - frame/75);
+          star.y += star.vy * (1 - frame/78);
+        }
+        frame++;
+        if(frame < 70) requestAnimationFrame(draw);
+        else {
+          canvas.style.opacity = '0';
+          setTimeout(()=>{
+            canvas.style.display='none';
+            canvas.style.opacity = '1';
+            playing = false;
+          }, 500);
+        }
+      }
+      draw();
+      setTimeout(() => {
+        window.location.href = "granny.html";
+      }, 3100); // Redirect after 3 seconds
+    });
+  </script>
+</body>
+</html>
