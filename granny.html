@@ -2,154 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Granny Remake Mobile Apk Details</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:700|Audiowide|Monoton&display=swap">
+  <title>Granny Remake Mobile Modded APK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Russo+One|Orbitron:700|Audiowide" rel="stylesheet">
   <style>
+    html, body {
+      height: 100%;
+    }
     body {
-      background: #0d0520;
       margin: 0;
-      font-family: 'Orbitron', 'Audiowide', 'Segoe UI', Arial, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      color: #fff;
+      font-family: 'Russo One', 'Orbitron', 'Audiowide', Arial, sans-serif;
+      /* Animated gradient background */
+      background: linear-gradient(-45deg, #11042b, #1ac3f4, #e644ea, #27003d, #1c2026, #3e007b);
+      background-size: 400% 400%;
+      animation: bg-gradient 11s ease-in-out infinite;
     }
-    .main-box {
-      margin-top: 55px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background: rgba(70,52,102,0.78);
-      border-radius: 20px;
-      box-shadow: 0 5px 27px #7003d485;
-      max-width: 430px;
-      padding: 22px 25px;
+    @keyframes bg-gradient {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 100% 100%; }
+      75% { background-position: 0% 100%; }
+      100% { background-position: 0% 50%; }
     }
-    .game-img {
-      width: 95px;
-      height: 95px;
-      border-radius: 18px;
-      object-fit: cover;
-      margin-right: 20px;
-      box-shadow: 0 3px 19px #00fff6a8;
-      border: 2px solid #fbeeee44;
-      background: #241142;
-    }
-    .title-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .main-title {
-      font-size: 1.25em;
-      background: linear-gradient(90deg, #5cfaff, #e24aaa 85%);
+    .main-header {
+      margin-top: 46px;
+      font-size: 2.1em;
+      background: linear-gradient(90deg, #23ffd9, #fc00ff 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 3px 20px #e76cff, 0 5px 30px #23ffd988;
+      font-family: 'Russo One', 'Orbitron', Arial, sans-serif;
       font-weight: bold;
-      letter-spacing: 1.3px;
-      margin-bottom: 8px;
-      filter: brightness(1.23);
+      text-align: center;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
     }
-    .info-table {
+    .main-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 25px;
+      object-fit: cover;
+      margin-bottom: 26px;
+      box-shadow: 0 11px 30px #5700cd91,0 1px 10px #00ffd966;
+      border: 3px solid #ff18c9;
+      background: #180d2f;
+      transition: border-color .19s;
+    }
+    .main-img:hover {
+      border-color: #23ffd9;
+    }
+    .desc {
+      max-width: 520px;
+      padding: 12px 21px;
+      font-size: 1.15em;
+      background: rgba(43,6,49,0.77);
+      border-radius: 22px;
+      box-shadow: 0 6px 29px #4bc6ffd3;
       color: #fff;
-      font-size: 1em;
-      margin-bottom: 6px;
-      margin-top: 8px;
-      margin-left: 2px;
-      letter-spacing: 0.25px;
+      font-family: 'Orbitron', 'Russo One', Arial, sans-serif;
+      letter-spacing: 1.12px;
+      margin-bottom: 38px;
     }
-    .info-table td {
-      padding-right: 10px;
-      padding-bottom: 2px;
-      font-weight: 500;
+    .info-list {
+      margin: 13px 0 0 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Orbitron', 'Russo One', Arial, sans-serif;
+      font-size: 1.09em;
+      letter-spacing: 1.4px;
     }
-    .source-note {
-      color: #64fcff;
-      font-size: 0.98em;
-      background: rgba(255,255,255,0.07);
-      border-radius: 8px;
-      padding: 4px 12px;
-      display: inline-block;
-      margin-bottom: 10px;
-      margin-top: 6px;
+    .info-list li { margin-bottom: 7px; }
+    .note-section {
+      margin: 21px 0 18px 0;
+      padding: 18px 27px;
+      font-size: 1.07em;
+      font-family: 'Orbitron', 'Audiowide', Arial, sans-serif;
+      font-weight: 600;
+      border-radius: 17px;
+      box-shadow: 0 4px 23px #00ffb5a3,0 0 7px #9003ffad;
+      background: linear-gradient(120deg, #23ffd980, #b965fe95 50%, #11b2e890 100%);
+      background-size: 220% 220%;
+      color: #e2f8ff;
+      animation: note-rainbow 7s ease-in-out infinite;
+      border: 2px solid #ff29ea;
+      transition: color .3s, border-color .3s;
     }
-    .download-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 32px 0 0 0;
-      flex-direction: row;
+    @keyframes note-rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
-    .download-link {
-      margin-left: 10px;
-      background: linear-gradient(90deg,#23ffd9 0,#673afe 89%);
+    .download-btn {
+      padding: 18px 48px;
+      font-size: 1.22em;
       color: #fff;
-      font-size: 1.18em;
-      font-family: 'Audiowide', 'Orbitron', Arial, sans-serif;
-      font-weight: 700;
-      padding: 16px 34px 16px 34px;
-      border-radius: 14px;
-      border: none;
-      box-shadow: 0 3px 22px #00b2fff2;
-      cursor: pointer;
-      outline: none;
+      background: linear-gradient(92deg,#23ffd9,#e76cff 90%);
+      border-radius: 17px;
       text-decoration: none;
-      position: relative;
-      transition: box-shadow 0.13s, transform 0.13s;
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.5px;
+      font-weight: bold;
+      box-shadow: 0 8px 40px #5715e6bb, 0 3px 10px #e76cff91;
+      font-family: 'Russo One', 'Orbitron', Arial, sans-serif;
+      letter-spacing: 1.19px;
+      border: none;
+      outline: none;
+      transition: box-shadow .13s, background .13s, color .2s;
+      margin-bottom: 32px;
+      display: inline-block;
+      margin-top: 15px;
     }
-    .download-link:hover {
-      box-shadow: 0 6px 38px #613aff, 0 0 20px #23ffd9;
-      transform: scale(1.06);
+    .download-btn:hover {
+      color: #0ff3ff;
+      background: linear-gradient(90deg,#e76cff,#23ffd9 90%);
+      box-shadow: 0 13px 45px #fc00ffb1, 0 0 18px #23ffd9c0;
     }
-    .download-arrow {
-      margin-left: 18px;
-      font-size: 1.6em;
-      color: #e9ffac;
-      filter: drop-shadow(0 0 8px #fff769);
-      animation: bounce 0.9s infinite alternate;
-    }
-    @keyframes bounce {
-      0% {transform: translateY(0);}
-      100% {transform: translateY(-7px);}
-    }
-    @media (max-width: 540px) {
-      .main-box {
-        flex-direction: column;
-        padding: 22px 8px;
-        align-items: flex-start;
-      }
-      .game-img {
-        margin: 0 0 18px 0;
-      }
-      .download-row {flex-direction: column;}
-      .download-link {margin-left: 0; margin-top: 16px;}
+    @media (max-width: 600px) {
+      .main-header { font-size: 1.3em; margin-top: 28px;}
+      .main-img { width: 88px; height: 88px; }
+      .desc { font-size: 1em; padding: 10px 10px;}
+      .note-section { font-size: .97em; padding: 13px 11px;}
+      .download-btn { padding: 15px 7vw; font-size: 1.05em;}
     }
   </style>
 </head>
 <body>
-  <div class="main-box">
-    <img class="game-img" src="1000105873.jpeg" alt="Granny Remake">
-    <div class="title-box">
-      <span class="main-title">Granny Remake Mobile Apk</span>
-      <table class="info-table">
-        <tr><td>Name:</td><td>Granny Remake Mobile</td></tr>
-        <tr><td>Size:</td><td>79 MB</td></tr>
-        <tr><td>Source:</td><td>Gamejolt</td></tr>
-      </table>
-      <span class="source-note">(Please check it out – it's a good website!)</span>
-    </div>
+  <div class="main-header">Granny Remake Mobile Modded APK</div>
+  <img src="1000105873.jpeg" class="main-img" alt="Granny Remake">
+  <div class="desc">
+    The remade version of Granny for mobile<br>
+    <ul class="info-list">
+      <li>Size: 78 MB</li>
+      <li>Source: Jolt</li>
+      <li>Version: 1.7.3</li>
+    </ul>
   </div>
-  <div class="download-row">
-    <span style="font-size:1.08em; color:#fff; letter-spacing:.5px; margin-right:8px; font-family:'Orbitron',Arial;">Direct download link here</span>
-    <a class="download-link" href="https://www.mediafire.com/file/f387uiw1nmczi60/grannyremake.apk/file" target="_blank">
-      Download APK
-      <span class="download-arrow">⤓</span>
-    </a>
+  <div class="note-section">
+    <b>Note:</b><br>
+    1. To get the screwdriver down, use the Tomato, as there are no real weapons in this version of Granny.<br>
+    2. There is UFO maingate and garage escape only.<br>
+    3. When you get the UFO remote and try to use it, it says to go to mannequins room, which is the 2nd floor room.<br>
+    4. After using the UFO remote, go to the place where you cut the watermelon, or you can say where the playhouse is, to do the escape.
   </div>
+  <a href="https://drive.google.com/file/d/your_file_id/view?usp=sharing" class="download-btn" target="_blank">Download APK</a>
 </body>
 </html>
