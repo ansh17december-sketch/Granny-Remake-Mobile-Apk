@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Apk Free download only for Android / ios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Russo+One|Orbitron:700|Audiowide" rel="stylesheet">
   <style>
     html, body { height: 100%; }
@@ -82,23 +83,13 @@
       color: #fc00ff;
       box-shadow: 0 0 14px #23ffd938;
       font-family: 'Orbitron', Arial, sans-serif;
-      padding: 12px 32px;
-      border-radius: 15px;
-      background: rgba(33,0,41,0.96);
-      letter-spacing: 1.18px;
-      font-size: 1.1em;
+      padding: 8px 27px;
+      margin: 13px 0 0 0;
+      border-radius: 12px;
+      background: rgba(33,0,41,0.85);
+      letter-spacing: 1.2px;
+      font-size: 1.13em;
       font-weight: 700;
-      /* animated border glow */
-      border: 2px solid #23ffd9;
-      animation: nfGlow 1.5s linear infinite alternate;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 18px;
-      max-width: 400px;
-    }
-    @keyframes nfGlow {
-      0% { box-shadow: 0 0 9px #23ffd990; border-color: #fc00ff;}
-      100% { box-shadow: 0 0 22px #e76cffc0; border-color: #23ffd9;}
     }
     .main-feature {
       margin-top: 11px;
@@ -110,19 +101,12 @@
       width: 92vw;
       display: flex;
       align-items: center;
-      transition: box-shadow 0.23s, transform 0.15s, border-color .2s, background-color .7s;
+      transition: box-shadow 0.15s, transform 0.15s, border-color .2s;
       cursor: pointer;
       text-decoration: none;
-      border: 2.5px solid #fc00ff;
+      border: 2.3px solid #fc00ff;
       font-family: 'Orbitron', 'Russo One', Arial, sans-serif;
       margin-bottom: 14px;
-    }
-    .main-feature.animating {
-      background: linear-gradient(93deg, #23ffd9 60%, #fc00ff 100%);
-      box-shadow: 0 15px 44px #fc00ffb1, 0 0 22px #23ffd9c0;
-      border-color: #23ffd9;
-      transform: scale(1.08);
-      transition: none;
     }
     .main-feature:hover {
       box-shadow: 0 13px 45px #fc00ffb1, 0 0 18px #23ffd9c0;
@@ -166,10 +150,7 @@
     <input class="search-input" id="search" type="text" placeholder="Search for games, mods, tools...">
     <span class="search-icon">&#128269;</span>
   </div>
-  <div id="notfound" class="not-found" style="display:none;">
-    Game/App not found.<br>
-    If you want this app to be added please contact us on ansh17december@gmail.com
-  </div>
+  <div id="notfound" class="not-found" style="display:none;">No result found!</div>
   <a href="granny.html" class="main-feature" id="granny-feature">
     <img class="main-img" src="1000105873.jpeg" alt="Granny Remake">
     <div class="feature-text">
@@ -179,19 +160,27 @@
     </div>
   </a>
   <a href="subnautica.html" class="main-feature" id="subnautica-feature">
-    <img class="main-img" src="subnautica.jpg" alt="Subnautica">
+    <img class="main-img" src="subnautica.jpg" alt="Subnautica Mobile">
     <div class="feature-text">
       <b>Subnautica Mobile APK</b><br>
       Experience the survival adventure on mobile!<br>
       Latest port, optimized for Android/iOS.
     </div>
   </a>
+  <div><a href="roblox.html" class="main-feature" id="roblox-feature">
+  <img class="main-img" src="roblox.jpg" alt="Roblox Mobile">
+  <div class="feature-text">
+    <b>Roblox Mobile APK</b><br>
+    Build, play, and imagine worlds with millions of users.<br>
+    Roblox brings endless creativity, games, and social adventures to your mobile device. Explore countless user-generated experiences and connect with friends globally—right from your phone!
+  </div>
+  </a>
+  </div>
   <script>
     const searchBar = document.getElementById('search');
     const grannyCard = document.getElementById('granny-feature');
     const subnauticaCard = document.getElementById('subnautica-feature');
     const notfound = document.getElementById('notfound');
-
     function search() {
       const q = searchBar.value.trim().toLowerCase();
       let any = false;
@@ -210,18 +199,6 @@
       notfound.style.display = any ? "none" : "block";
     }
     searchBar.addEventListener('input', search);
-
-    function featureClick(e, url) {
-      e.preventDefault();
-      const card = e.currentTarget;
-      card.classList.add('animating');
-      setTimeout(() => {
-        card.classList.remove('animating');
-        window.location.href = url;
-      }, 1000);
-    }
-    grannyCard.addEventListener('click', function(e) { featureClick(e, "granny.html"); });
-    subnauticaCard.addEventListener('click', function(e) { featureClick(e, "subnautica.html"); });
   </script>
 </body>
 </html>
