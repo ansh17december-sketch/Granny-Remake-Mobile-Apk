@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subnautica Mobile APK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts and animated neon theme -->
+  <link href="https://fonts.googleapis.com/css?family=Russo+One|Orbitron:700|Audiowide" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Russo One', 'Orbitron', 'Audiowide', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(-45deg, #11042b, #1ac3f4, #e644ea, #27003d, #1c2026, #3e007b);
+      background-size: 400% 400%;
+      animation: bg-gradient 11s ease-in-out infinite;
+      color: #fff;
+    }
+    @keyframes bg-gradient {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 100% 100%; }
+      75% { background-position: 0% 100%; }
+      100% { background-position: 0% 50%; }
+    }
+    .main-header {
+      margin-top: 44px;
+      font-size: 2.3em;
+      background: linear-gradient(90deg, #23ffd9, #fc00ff 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 3px 20px #e76cff, 0 5px 30px #23ffd988;
+      font-family: 'Russo One', 'Orbitron', Arial, sans-serif;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .main-img {
+      width: 140px; height: 140px;
+      border-radius: 25px;
+      object-fit: cover;
+      margin-bottom: 26px;
+      box-shadow: 0 11px 30px #5700cd91,0 1px 10px #00ffd966;
+      border: 3px solid #12e7e7;
+      background: #180d2f;
+      transition: border-color .19s;
+    }
+    .main-img:hover {
+      border-color: #23ffd9;
+    }
+    .desc {
+      max-width: 520px;
+      padding: 12px 21px;
+      font-size: 1.15em;
+      background: rgba(43,6,49,0.77);
+      border-radius: 22px;
+      box-shadow: 0 6px 29px #4bc6ffd3;
+      color: #fff;
+      font-family: 'Orbitron', 'Russo One', Arial, sans-serif;
+      letter-spacing: 1.12px;
+      margin-bottom: 16px;
+    }
+    .info-list {
+      margin: 13px 0 0 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Orbitron', 'Russo One', Arial, sans-serif;
+      font-size: 1.09em;
+      letter-spacing: 1.4px;
+    }
+    .info-list li { margin-bottom: 7px; }
+    .requirements {
+      background: rgba(24,25,74,0.7);
+      border-radius: 10px;
+      box-shadow: 0 1px 16px #23ffd94c;
+      padding: 14px 19px;
+      margin-bottom: 22px;
+      margin-top: 20px;
+      font-size: 1.06em;
+      font-family: 'Orbitron', Arial, sans-serif;
+      color: #0fe9e4;
+      letter-spacing: 1.07px;
+    }
+    .note-section {
+      margin: 16px 0 18px 0;
+      padding: 18px 27px;
+      font-size: 1.07em;
+      font-family: 'Orbitron', 'Audiowide', Arial, sans-serif;
+      font-weight: 600;
+      border-radius: 17px;
+      box-shadow: 0 4px 23px #00ffb5a3,0 0 7px #9003ffad;
+      background: linear-gradient(120deg, #23ffd980, #b965fe95 50%, #11b2e890 100%);
+      background-size: 220% 220%;
+      color: #e2f8ff;
+      animation: note-rainbow 7s ease-in-out infinite;
+      border: 2px solid #12e7e7;
+      transition: color .3s, border-color .3s;
+    }
+    @keyframes note-rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .download-btn {
+      padding: 18px 48px;
+      font-size: 1.22em;
+      color: #fff;
+      background: linear-gradient(92deg,#23ffd9,#e76cff 90%);
+      border-radius: 17px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 40px #5715e6bb, 0 3px 10px #e76cff91;
+      font-family: 'Russo One', 'Orbitron', Arial, sans-serif;
+      letter-spacing: 1.19px;
+      border: none;
+      outline: none;
+      transition: box-shadow .13s, background .13s, color .2s;
+      margin-bottom: 32px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .download-btn:hover {
+      color: #0ff3ff;
+      background: linear-gradient(90deg,#e76cff,#23ffd9 90%);
+      box-shadow: 0 13px 45px #fc00ffb1, 0 0 18px #23ffd9c0;
+    }
+    @media (max-width: 600px) {
+      .main-header { font-size: 1.3em; margin-top: 28px;}
+      .main-img { width: 88px; height: 88px; }
+      .desc { font-size: 1em; padding: 10px 10px;}
+      .note-section { font-size: .97em; padding: 13px 11px;}
+      .requirements { font-size: .95em; padding: 10px 9px;}
+      .download-btn { padding: 15px 7vw; font-size: 1.05em;}
+    }
+  </style>
+</head>
+<body>
+  <div class="main-header">Subnautica Mobile APK</div>
+  <img src="subnautica.jpg" class="main-img" alt="Subnautica Mobile">
+  <div class="desc">
+    The latest mobile port of the popular underwater survival game. Explore the depths, craft gear, and survive on an alien ocean world.<br>
+    <ul class="info-list">
+      <li>Size: 1 GB - 1.5 GB</li>
+      <li>Developer: Unknown Mobile Modders</li>
+      <li>Version: Latest</li>
+    </ul>
+  </div>
+  <div class="requirements">
+    <b>Requirements:</b>
+    <ul>
+      <li>Android 8.0 or above (64-bit recommended)</li>
+      <li>Minimum 4 GB RAM, 6 GB or more recommended for best performance</li>
+      <li>Free storage space: 2 GB or more</li>
+      <li>Mid/high-end processor (Snapdragon 720G, or better)</li>
+      <li>Permissions: Storage access, Internet (for updates)</li>
+    </ul>
+  </div>
+  <div class="note-section">
+    <b>Note:</b><br>
+    1. Large resource packs may require additional downloads after installing the APK.<br>
+    2. Game performance depends heavily on device specs; low-end phones may experience crashes or long load times.<br>
+    3. Touch controls are optimized for landscape mode and may not support external controllers.
+  </div>
+  <a href="https://drive.google.com/file/d/your_file_id/view?usp=sharing" class="download-btn" target="_blank">Download APK</a>
+</body>
+</html>
