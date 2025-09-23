@@ -183,6 +183,14 @@
     Play fast-paced 10-minute matches, choose your character, and compete with millions worldwide in Garena Free Fire.
   </div>
     </a>
+    <a href="freefiremax.html" class="main-feature" id="freefiremax-feature">
+  <img class="main-img" src="freefiremax.jpg" alt="Free Fire Max Mobile">
+  <div class="feature-text">
+    <b>Free Fire Max Mobile APK</b><br>
+    Dive into the ultimate battle royale on mobile!<br>
+    Play fast-paced 10-minute matches, choose your character, and compete with millions worldwide in Garena Free Fire Max.
+  </div>
+    </a>
   </div>
   <script>
     const searchBar = document.getElementById('search');
@@ -190,6 +198,7 @@
     const subnauticaCard = document.getElementById('subnautica-feature');
     const robloxCard = document.getElementById('roblox-feature');
     const freefireCard = document.getElementById('freefire-feature');
+   const freefiremaxCard = document.getElementById('freefiremax-feature');
     const notfound = document.getElementById('notfound');
     
     function search() {
@@ -218,6 +227,12 @@
   any = true;
 } else {
   freefireCard.style.display = 'none';
+      }
+      if (q === "" || "freefiremax".startsWith(q) || q.includes("freefiremax") || "free fire max".includes(q)) {
+  freefiremaxCard.style.display = '';
+  any = true;
+} else {
+  freefiremaxCard.style.display = 'none';
       }
   notfound.style.display = any ? "none" : "block";
 }
