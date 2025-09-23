@@ -150,7 +150,7 @@
     <input class="search-input" id="search" type="text" placeholder="Search for games, mods, tools...">
     <span class="search-icon">&#128269;</span>
   </div>
-  <div id="notfound" class="not-found" style="display:none;">No result found!</div>
+  <div id="notfound" class="not-found" style="display:none;">No result found!If u want to get your app added then contact me at ansh17december@gmail.com</div>
   <a href="granny.html" class="main-feature" id="granny-feature">
     <img class="main-img" src="1000105873.jpeg" alt="Granny Remake">
     <div class="feature-text">
@@ -180,25 +180,33 @@
     const searchBar = document.getElementById('search');
     const grannyCard = document.getElementById('granny-feature');
     const subnauticaCard = document.getElementById('subnautica-feature');
+    const robloxCard = document.getElementById('roblox-feature');
     const notfound = document.getElementById('notfound');
+    
     function search() {
-      const q = searchBar.value.trim().toLowerCase();
-      let any = false;
-      if (q === "" || "granny".startsWith(q) || q.includes("granny")) {
-        grannyCard.style.display = '';
-        any = true;
-      } else {
-        grannyCard.style.display = 'none';
-      }
-      if (q === "" || "subnautica".startsWith(q) || q.includes("subnautica")) {
-        subnauticaCard.style.display = '';
-        any = true;
-      } else {
-        subnauticaCard.style.display = 'none';
-      }
-      notfound.style.display = any ? "none" : "block";
-    }
-    searchBar.addEventListener('input', search);
+  const q = searchBar.value.trim().toLowerCase();
+  let any = false;
+  if (q === "" || "granny".startsWith(q) || q.includes("granny")) {
+    grannyCard.style.display = '';
+    any = true;
+  } else {
+    grannyCard.style.display = 'none';
+  }
+  if (q === "" || "subnautica".startsWith(q) || q.includes("subnautica")) {
+    subnauticaCard.style.display = '';
+    any = true;
+  } else {
+    subnauticaCard.style.display = 'none';
+  }
+  if (q === "" || "roblox".startsWith(q) || q.includes("roblox")) {
+    robloxCard.style.display = '';
+    any = true;
+  } else {
+    robloxCard.style.display = 'none';
+  }
+  notfound.style.display = any ? "none" : "block";
+}
+searchBar.addEventListener('input', search);
   </script>
 </body>
 </html>
