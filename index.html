@@ -175,12 +175,21 @@
     Roblox brings endless creativity, games, and social adventures to your mobile device. Explore countless user-generated experiences and connect with friends globally—right from your phone!
   </div>
   </a>
+    <a href="freefire.html" class="main-feature" id="freefire-feature">
+  <img class="main-img" src="freefire.jpg" alt="Free Fire Mobile">
+  <div class="feature-text">
+    <b>Free Fire Mobile APK</b><br>
+    Dive into the ultimate battle royale on mobile!<br>
+    Play fast-paced 10-minute matches, choose your character, and compete with millions worldwide in Garena Free Fire.
+  </div>
+    </a>
   </div>
   <script>
     const searchBar = document.getElementById('search');
     const grannyCard = document.getElementById('granny-feature');
     const subnauticaCard = document.getElementById('subnautica-feature');
     const robloxCard = document.getElementById('roblox-feature');
+    const freefireCard = document.getElementById('freefire-feature');
     const notfound = document.getElementById('notfound');
     
     function search() {
@@ -204,6 +213,12 @@
   } else {
     robloxCard.style.display = 'none';
   }
+      if (q === "" || "freefire".startsWith(q) || q.includes("freefire") || "free fire".includes(q)) {
+  freefireCard.style.display = '';
+  any = true;
+} else {
+  freefireCard.style.display = 'none';
+      }
   notfound.style.display = any ? "none" : "block";
 }
 searchBar.addEventListener('input', search);
