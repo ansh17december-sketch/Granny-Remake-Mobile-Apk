@@ -2,183 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Granny Remake Mobile Modded APK</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:700|Audiowide|Monoton&display=swap">
+  <title>Apk Free download only for Android / ios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Audiowide" rel="stylesheet">
   <style>
     body {
-      background: #070214;
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0c0721;
+      font-family: 'Orbitron', 'Audiowide', 'Segoe UI', Arial, sans-serif;
       min-height: 100vh;
-      overflow-x: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
-    .neon-title {
-      font-size: 2.6em;
-      font-family: 'Monoton', 'Orbitron', 'Audiowide', Arial, sans-serif;
-      text-align: center;
-      margin-top: 66px;
-      text-shadow:
-        0 0 6px #fff,
-        0 0 25px #fff292,
-        0 0 45px #78ffd6,
-        0 0 82px #c3bf6d;
-      background: linear-gradient(90deg, #ff00cc, #00fff7 40%, #FFD700 90%);
+    .main-header {
+      margin-top: 52px;
+      font-size: 2.2em;
+      color: #fff;
+      background: linear-gradient(90deg, #23ffd9, #e76cff 85%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 2.4px;
-      padding-bottom: 8px;
-      filter: brightness(1.18);
-      animation: pulse 2s infinite alternate;
+      font-family: 'Orbitron', 'Audiowide', Arial, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1.5px;
+      text-shadow: 0 3px 18px #5739e0, 0 1px 10px #23ffd988;
+      margin-bottom: 40px;
     }
-    @keyframes pulse {
-      0% {filter: brightness(1);}
-      100% {filter: brightness(1.35);}
-    }
-    .container {
-      margin-top: 55px;
-      width: 340px;
-      position: relative;
-      z-index: 2;
+    .search-container {
+      width: 95vw;
+      max-width: 410px;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-    }
-    .card-btn {
-      width: 100%;
-      font-family: 'Audiowide', 'Segoe UI', 'Orbitron', Arial, sans-serif;
-      background: linear-gradient(115deg, #5cfaff 15%, #e24aaa 70%, #fff020 100%);
-      color: #23223d;
-      font-size: 1.33em;
-      border-radius: 21px;
-      border: none;
-      padding: 36px 18px 30px 28px;
-      font-weight: 700;
-      box-shadow: 0 8px 34px #09ffe664, 0 0 24px #ff3a8da9;
-      cursor: pointer;
-      text-align: left;
-      letter-spacing: 1.14px;
+      margin-bottom: 38px;
       position: relative;
-      transition: box-shadow 0.18s, transform 0.15s, color 0.16s;
-      backdrop-filter: blur(2px);
+    }
+    .search-input {
+      width: 100%;
+      padding: 16px 48px 16px 18px;
+      font-size: 1.07em;
+      border-radius: 14px;
+      border: none;
+      background: linear-gradient(90deg, #251755 60%, #162332 100%);
+      color: #23ffd9;
+      box-shadow: 0 4px 14px #23ffd926, 0 0 0 #e76cff;
       outline: none;
-      margin-top: 10px;
+      transition: box-shadow .17s;
+      font-family: 'Audiowide', Arial, sans-serif;
+      letter-spacing: 1.2px;
+      border: 1.5px solid #23ffd9;
     }
-    .card-btn:hover, .card-btn:focus {
-      box-shadow: 0 13px 56px #64e2d5c4, 0 0 32px #ff3a8d;
-      color: #ff48b1;
-      transform: scale(1.045);
+    .search-input:focus {
+      box-shadow: 0 4px 22px #e76cff88,0 0 0 #23ffd9;
+      border-color: #e76cff;
+      background: linear-gradient(92deg, #1a325a 78%, #1a0020 100%);
     }
-    .btn-label {
-      background: rgba(12,19,100,.27);
-      border-radius: 10px;
-      color: #fff;
-      font-size: 0.98em;
-      font-weight: 600;
-      padding: 6px 20px 4px 16px;
-      margin-bottom: 13px;
-      display: inline-block;
-      letter-spacing: 0.47px;
-      font-style: italic;
-      box-shadow: 0 0 18px #00d1ffb4;
-    }
-    .card-btn::after {
-      content: "★";
-      float: right;
-      font-size: 1.4em;
-      margin-top: -36px;
-      opacity: .59;
-      color: #fff0a1;
-      filter: blur(0.2px);
-      text-shadow: 0 0 10px #fff0a1,0 0 8px #00fff7;
-    }
-    .star-animation {
+    .search-icon {
+      position: absolute;
+      right: 16px;
+      color: #23ffd9b0;
+      font-size: 1.3em;
+      top: 50%;
+      transform: translateY(-50%);
       pointer-events: none;
-      position: fixed;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      z-index: 99;
-      overflow: visible;
-      background: transparent;
-      opacity: 1;
-      transition: opacity 0.6s cubic-bezier(.4,2,.4,1.10);
-      display: none;
+      text-shadow: 0 0 10px #00ffd8cc;
     }
-    @media (max-width: 470px) {
-      .container {width: 97vw;}
-      .neon-title {font-size: 1.25em;}
-      .card-btn {font-size: .99em;}
+    .not-found {
+      color: #ff297b;
+      box-shadow: 0 0 14px #e76cffac;
+      font-family: 'Audiowide', Arial, sans-serif;
+      padding: 9px 25px;
+      margin: 13px 0 0 0;
+      border-radius: 13px;
+      background: rgba(33,0,41,0.85);
+      letter-spacing: 1.2px;
+      font-size: 1.1em;
+    }
+    .main-feature {
+      margin-top: 20px;
+      background: linear-gradient(92deg, rgba(70,52,102,0.95) 78%, #201046 100%);
+      border-radius: 21px;
+      box-shadow: 0 6px 29px #2463e6a8;
+      padding: 18px 19px 16px 18px;
+      max-width: 385px;
+      width: 92vw;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: box-shadow 0.12s, transform 0.12s;
+      cursor: pointer;
+      text-decoration: none;
+      border: 2px solid #23ffd9;
+    }
+    .main-feature:hover {
+      box-shadow: 0 11px 38px #e76cffb1,0 0 18px #23ffd9;
+      transform: scale(1.025);
+      border-color: #e76cff;
+    }
+    .main-img {
+      width: 80px; height: 80px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-right: 18px;
+      border: 2.2px solid #23ffd9ee;
+      box-shadow: 0 4px 16px #b679ff51;
+      background: #180d2f;
+      transition: border-color .19s;
+    }
+    .main-feature:hover .main-img {border-color: #e76cff;}
+    .feature-text {
+      color: #fff;
+      font-size: 1.09em;
+      font-family: 'Audiowide', 'Orbitron', Arial, sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 1.38em;
+    }
+    @media (max-width: 540px) {
+      .main-header {font-size: 1.1em; margin-top: 32px;}
+      .main-feature {flex-direction: column; align-items: flex-start;}
+      .main-img {margin-right: 0; margin-bottom: 15px;}
+      .feature-text {font-size: .98em;}
     }
   </style>
 </head>
 <body>
-  <div class="neon-title">✨ Granny Remake Mobile Modded APK ✨</div>
-  <div class="container">
-    <button class="card-btn" id="mainBtn">
-      <span class="btn-label">Download Now</span><br>
-      Granny Remake Mobile Modded APK
-    </button>
+  <div class="main-header">
+    Apk Free download only for Android / ios
   </div>
-  <canvas class="star-animation" id="starAnim"></canvas>
+  <div class="search-container">
+    <input class="search-input" id="search" type="text" placeholder="Search for games, mods, tools...">
+    <span class="search-icon">&#128269;</span>
+  </div>
+  <div id="notfound" class="not-found" style="display:none;">No result found!</div>
+  <a href="granny.html" class="main-feature" id="granny-feature">
+    <img class="main-img" src="1000105873.jpeg" alt="Granny Remake">
+    <div class="feature-text">
+      <b>Granny Remake Mobile Modded APK</b><br>
+      Latest mobile port and mod version!<br>
+      Fast, direct, and ad-free.
+    </div>
+  </a>
   <script>
-    // Star animation logic & redirect
-    const btn = document.getElementById('mainBtn');
-    const canvas = document.getElementById('starAnim');
-    let playing = false;
-    btn.addEventListener('click', () => {
-      if (playing) return;
-      canvas.style.display = 'block';
-      let W = window.innerWidth, H = window.innerHeight;
-      canvas.width = W; canvas.height = H;
-      const ctx = canvas.getContext('2d');
-      const stars = [];
-      const count = 90;
-      for(let i=0; i<count; i++) {
-        let angle = 2 * Math.PI * i / count;
-        let speed = 5 + Math.random() * 11;
-        stars.push({
-          x: W/2, y: H/2,
-          vx: Math.cos(angle) * speed + (Math.random()-0.5)*3,
-          vy: Math.sin(angle) * speed + (Math.random()-0.5)*3,
-          r: 2 + Math.random()*3,
-          color: `hsl(${200+Math.random()*140},100%,70%)`
-        });
+    // Simple search with "Granny" as only match
+    const searchBar = document.getElementById('search');
+    const card = document.getElementById('granny-feature');
+    const notfound = document.getElementById('notfound');
+    function search() {
+      const q = searchBar.value.trim().toLowerCase();
+      if (q === "" || "granny".startsWith(q) || q.includes("granny")) {
+        card.style.display = '';
+        notfound.style.display = "none";
+      } else {
+        card.style.display = 'none';
+        notfound.style.display = "block";
       }
-      let frame = 0; playing = true;
-      function draw() {
-        ctx.clearRect(0,0,W,H);
-        for(let star of stars) {
-          ctx.save();
-          ctx.beginPath();
-          ctx.arc(star.x, star.y, star.r, 0, 2*Math.PI);
-          ctx.shadowBlur = 12;
-          ctx.shadowColor = star.color;
-          ctx.fillStyle = star.color;
-          ctx.globalAlpha = 1-Math.min(frame/90,0.91);
-          ctx.fill();
-          ctx.restore();
-          star.x += star.vx * (1 - frame/75);
-          star.y += star.vy * (1 - frame/78);
-        }
-        frame++;
-        if(frame < 70) requestAnimationFrame(draw);
-        else {
-          canvas.style.opacity = '0';
-          setTimeout(()=>{
-            canvas.style.display='none';
-            canvas.style.opacity = '1';
-            playing = false;
-          }, 500);
-        }
-      }
-      draw();
-      setTimeout(() => {
-        window.location.href = "granny.html";
-      }, 3100); // Redirect after 3 seconds
-    });
+    }
+    searchBar.addEventListener('input', search);
   </script>
 </body>
 </html>
